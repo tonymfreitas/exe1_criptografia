@@ -18,18 +18,37 @@
         <div class="col-md-12">
             <input class="form-control" id="fileToLoad" type="file" onchange="loadFileAsText()">
         </div>
-        <div class="form-group">
-            <label for="textoCifrado">Texto cifrado</label>
-            <textarea name="" id="textoCifrado" cols="30" rows="10" class="form-control"></textarea>
-        </div>
-        <div class="form-group">
-            <label for="chave">Chave</label>
-            <input type="text" class="form-control" id="chave">
-        </div>
         <div class="col-md-12">
-            <button class="btn btn-info pull-right" onclick="salvarTexto()">SALVAR</button>
-            <button onclick="decodificar()">DESCRIPTOGRAFAR</button>
-            <button class="btn btn-primary pull-right" onclick="codificar()">CRIPTOGRAFAR (CIFRA DE CÉSAR)</button>
+            <div class="col-md-6">
+                <div>
+                    <h3>Criptografia de configuração de chave</h3>
+                </div>
+                <div class="form-group">
+                    <label for="textoCifrado">Texto cifrado</label>
+                    <textarea name="" id="textoCifrado" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+                <div class="form-group">
+                    <label for="chave">Chave</label>
+                    <input type="text" class="form-control" id="chave">
+                </div>
+                <div class="col-md-12">
+                    <button onclick="decodificar(false)" class="btn btn-success">DESCRIPTOGRAFAR</button>
+                    <button class="btn btn-primary pull-right" onclick="codificar(false)">CRIPTOGRAFAR</button>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div>
+                    <h3>Criptografia chave de césar</h3>
+                </div>
+                <div class="form-group">
+                    <label for="textoCifradoCesar">Texto cifrado</label>
+                    <textarea name="" id="textoCifradoCesar" cols="30" rows="10" class="form-control"></textarea>
+                </div>
+             <div class="col-md-12">
+                    <button onclick="decodificar(true)" class="btn btn-success">DESCRIPTOGRAFAR</button>
+                    <button class="btn btn-primary pull-right" onclick="codificar(true)">CRIPTOGRAFAR</button>
+                </div>
+            </div>
         </div>
     </div>
 </body>
